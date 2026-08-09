@@ -1,6 +1,6 @@
-import Label from "../components/label";
-import Button from "../components/button";
-import Dropdown, { type DropdownItem } from "../components/dropdown";
+import Label from "../components/atomic/label";
+import Button from "../components/atomic/button";
+import Dropdown, { type DropdownItem } from "../components/composite/dropdown";
 import BaseModal from "./BaseModal";
 
 import { useTheme } from "../hooks/useTheme";

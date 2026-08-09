@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Button from "./components/button";
-import Container from "./components/container";
+import Button from "./components/atomic/button";
+import Container from "./components/atomic/container";
 import ConfigModal from "./modals/ConfigModal";
 
 function App() {
