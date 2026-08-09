@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
-import Title from "../components/title";
+import Title from "../components/atomic/title";
 
 interface ModalProps {
   isOpen: boolean;
