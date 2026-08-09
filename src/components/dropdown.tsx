@@ -21,19 +21,19 @@ export default function Dropdown({ items, label = "Menu" }: DropdownProps) {
         onClick={toggleDropdown}
         aria-haspopup="true"
         aria-expanded={isOpen}
-        className="px-4 py-2 bg-white border border-gray-300 rounded cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="px-4 py-2 bg-component-bg text-app-text border border-border rounded cursor-pointer hover:bg-component-bg-hovered focus:outline-none focus:ring-2 focus:ring-focus shado"
       >
         {label + " ▾"}
       </button>
 
       {isOpen && (
-        <ul className="absolute left-0 top-full z-[1000] mt-1.5 min-w-[160px] list-none rounded border border-gray-300 bg-white py-2.5 shadow-md">
+        <ul className="absolute left-0 top-full z-[1000] mt-1.5 min-w-[160px] list-none rounded border border-border bg-component-bg py-2.5 shadow-md">
           {items.map((item, index) => (
             <li key={index}>
               {typeof item.action === "string" ? (
                 <a
                   href={item.action}
-                  className="block px-4 py-2 text-gray-700 no-underline hover:bg-gray-100"
+                  className="block px-4 py-2 text-app-text no-underline hover:bg-component-bg-hovered rounded-md"
                 >
                   {item.name}
                 </a>
@@ -43,7 +43,7 @@ export default function Dropdown({ items, label = "Menu" }: DropdownProps) {
                     (item.action as () => void)();
                     setIsOpen(false);
                   }}
-                  className="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 focus:outline-none"
+                  className="block w-full px-4 py-2 text-left text-app-text hover:bg-component-bg-hovered focus:outline-none focus:ring-2 focus:ring-focus roduned-md"
                 >
                   {item.name}
                 </button>

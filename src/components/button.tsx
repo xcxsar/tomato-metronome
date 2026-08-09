@@ -1,8 +1,8 @@
 const buttonType: Record<string, string> = {
   primary:
-    "bg-rose-600 dark:bg-rose-900 hover:bg-rose-700 dark:hover:bg-rose-800 text-white",
+    "bg-button-primary hover:bg-button-primary-hovered text-button-primary-text",
   secondary:
-    "bg-zinc-50 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-600 dark:text-white ",
+    "bg-button-secondary hover:bg-button-secondary-hovered text-button-secondary-text ",
 };
 
 interface ButtonProps {
@@ -17,7 +17,7 @@ function Button({ type, message, click }: ButtonProps) {
       <button
         className={
           buttonType[type] +
-          " rounded-md px-4 py-2 text-sm font-medium shadow transition-colors"
+          " rounded-md px-4 py-2 text-sm font-medium shadow transition-colors focus:outline-none focus:ring-2 focus:ring-focus"
         }
         onClick={click}
       >

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
+import Title from "../components/title";
 
 interface ModalProps {
   isOpen: boolean;
@@ -24,19 +25,17 @@ function BaseModal({ isOpen, onClose, title, children }: ModalProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-900/70 dark:bg-zinc-950 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-app-bg-open-modal/70 p-4"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-md transform rounded-lg bg-zinc-50 dark:bg-zinc-900 p-6 shadow-xl transition-all"
+        className="w-full max-w-md transform rounded-lg bg-modal-bg p-6 shadow-xl transition-all"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="px-4 py-2 flex items-center justify-between border-b border-gray-200 dark:border-zinc-700">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-rose-900">
-            {title}
-          </h3>
+        <div className="py-2 flex items-center justify-between border-b border-gray-200 dark:border-zinc-700">
+          <Title text={title} />
           <button
-            className="text-gray-400  dark:text-zinc-700 hover:text-gray-600 dark:hover:text-zinc-500 text-2xl font-light transition-colors leading-none"
+            className="text-gray-400 dark:text-zinc-700 hover:text-zinc-600 dark:hover:text-zinc-500 text-2xl font-light transition-colors leading-none focus:outline-none focus:ring-2 focus:ring-focus"
             onClick={onClose}
             aria-label="Close modal"
           >
@@ -44,9 +43,7 @@ function BaseModal({ isOpen, onClose, title, children }: ModalProps) {
           </button>
         </div>
 
-        <div className="text-sm text-gray-600 dark:text-zinc-100 leading-relaxed">
-          {children}
-        </div>
+        <div className="text-sm leading-relaxed">{children}</div>
       </div>
     </div>,
     document.body,
