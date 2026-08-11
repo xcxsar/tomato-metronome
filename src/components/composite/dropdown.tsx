@@ -16,7 +16,7 @@ export default function Dropdown({ items, label = "Menu" }: DropdownProps) {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block selection:bg-selection-bg">
       <button
         onClick={toggleDropdown}
         aria-haspopup="true"

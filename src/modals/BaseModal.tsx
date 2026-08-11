@@ -25,7 +25,7 @@ function BaseModal({ isOpen, onClose, title, children }: ModalProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-app-bg-open-modal/70 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-app-bg-open-modal/70 p-4 selection:bg-selection-bg"
       onClick={onClose}
     >
       <div
