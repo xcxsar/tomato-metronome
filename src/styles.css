@@ -3,14 +3,24 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  /* App Colors */
   --color-app-bg: var(--color-zinc-50);
   --color-component-bg: var(--color-zinc-50);
   --color-component-bg-hovered: var(--color-zinc-200);
   --color-focus: var(--color-rose-600);
   --color-app-bg-open-modal: var(--color-zinc-700);
   --color-modal-bg: var(--color-zinc-50);
+
+  /* Text */
   --color-app-text: var(--color-zinc-950);
   --color-title-text: var(--color-zinc-950);
+  --color-selection-bg: var(--color-rose-600);
+
+  /* Icons */
+  --color-icon: var(--color-zinc-400);
+  --color-icon-hovered: var(--color-rose-600);
+
+  /* Buttons */
   --color-button-primary: var(--color-rose-600);
   --color-button-primary-hovered: var(--color-rose-700);
   --color-button-primary-text: var(--color-zinc-50);
@@ -21,14 +31,24 @@
 }
 
 .dark {
+  /* App Colors */
   --color-app-bg: var(--color-zinc-950);
   --color-component-bg: var(--color-zinc-800);
   --color-component-bg-hovered: var(--color-zinc-700);
   --color-focus: var(--color-rose-700);
   --color-app-bg-open-modal: var(--color-zinc-950);
   --color-modal-bg: var(--color-zinc-900);
+
+  /* Text */
   --color-app-text: var(--color-zinc-50);
   --color-title-text: var(--color-zinc-50);
+  --color-selection-bg: var(--color-rose-600);
+
+  /* Icons */
+  --color-icon: var(--color-zinc-600);
+  --color-icon-hovered: var(--color-rose-900);
+
+  /* Buttons */
   --color-button-primary: var(--color-rose-900);
   --color-button-primary-hovered: var(--color-rose-800);
   --color-button-primary-text: var(--color-zinc-50);
