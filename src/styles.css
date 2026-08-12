@@ -13,6 +13,7 @@
 
   /* Text */
   --color-app-text: var(--color-zinc-950);
+  --color-header-text: var(--color-rose-600);
   --color-title-text: var(--color-zinc-950);
   --color-selection-bg: var(--color-rose-600);
 
@@ -41,6 +42,7 @@
 
   /* Text */
   --color-app-text: var(--color-zinc-50);
+  --color-header-text: var(--color-rose-900);
   --color-title-text: var(--color-zinc-50);
   --color-selection-bg: var(--color-rose-600);
 

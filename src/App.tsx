@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import Button from "./components/atomic/button";
 import Container from "./components/atomic/container";
 import ConfigModal from "./modals/ConfigModal";
 import Navbar from "./components/composite/navbar";
 import IconButton from "./components/atomic/iconButton";
+import TempoSelector from "./components/composite/tempoSelector";
 
 function App() {
   const [isConfigModalOpen, setIsConfigModalOpen] = useState<boolean>(false);
@@ -18,11 +18,7 @@ function App() {
           />
         </Navbar>
         <div className="flex flex-col h-full items-center place-content-center">
-          <Button
-            message={"Configuración"}
-            type={"primary"}
-            click={() => setIsConfigModalOpen(true)}
-          />
+          <TempoSelector />
 
           <ConfigModal
             isOpen={isConfigModalOpen}
