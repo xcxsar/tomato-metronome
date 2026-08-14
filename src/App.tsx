@@ -6,7 +6,6 @@ import Navbar from "./components/composite/navbar";
 import IconButton from "./components/atomic/iconButton";
 import TempoSelector from "./components/composite/tempoSelector";
 import { useMetronome } from "./hooks/useMetronome";
-import Button from "./components/atomic/button";
 
 function App() {
   const [isConfigModalOpen, setIsConfigModalOpen] = useState<boolean>(false);
